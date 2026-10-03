@@ -29,3 +29,5 @@ A variable only in that one shell sessions and destroyed when the terminal is te
 - head -n 5 <filename>.csv gives the first 5 rows of csv
 - cut means only take the chaacters selected: cut -c 1,3,4 <filename>.csv
   - in this case, only take the first, third and fourth, (index starts from 1 not 0)
+  - range like this 1-9 is possible
+      - 1- and -9 is possible
