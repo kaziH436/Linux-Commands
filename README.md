@@ -31,3 +31,22 @@ A variable only in that one shell sessions and destroyed when the terminal is te
   - in this case, only take the first, third and fourth, (index starts from 1 not 0)
   - range like this 1-9 is possible
       - 1- and -9 is possible
+- taking a sample of rows and putting it in a new file: head n 7 <filename>.csv > <newfilename>.csv
+- append to the new file name: tail -n 3 <filename>.csv >> <filename>.csv
+- f: columns number and d: delimiter (comma, tabs: default) `cut -d , -f,2 <filename>.csv
+  - -f,2,3,4
+- sort: numbers before letter
+  - if letters are same so like fish and fan, the order is fish, fan
+  - capital comes before small letter
+  - the order is then followed as is
+  - sort -r: reverse sort
+  - `u`: unique (removes duplicate rows) not sure what its comparing
+  - 'k': sort by a specific column
+  - 'n': sort numerically in increasing order
+  - cut -d, -f 1-3 onlineretail.csv | sort -k3n -t | tail -n 10
+- uniq (only removed duplicate when adjacent to each other so the csv needs to be sorted)
+
+## Excersize
+### Export a csv containing a list of customers along with invoice id 
+
+
