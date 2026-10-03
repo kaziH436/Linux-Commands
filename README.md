@@ -46,7 +46,14 @@ A variable only in that one shell sessions and destroyed when the terminal is te
   - cut -d, -f 1-3 onlineretail.csv | sort -k3n -t | tail -n 10
 - uniq (only removed duplicate when adjacent to each other so the csv needs to be sorted)
 
+
 ## Excersize
-### Export a csv containing a list of customers along with invoice id 
+### How many lines are duplicates are there?
+val1=$(cat Onlineretal.csv | wc -1)
+val2=$(cat Onlineretal.csv | sort | uniq| wc -1)
+echo "$((val1-val2))"
+
+### Value counts in linux commands 
+cut -d , -f 3 OnlineRetail.csv | sort | uniq -c | sort -rn | head -n 20
 
 
